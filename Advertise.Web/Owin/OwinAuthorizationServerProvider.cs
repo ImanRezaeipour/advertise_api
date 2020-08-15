@@ -1,0 +1,35 @@
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Advertise.Core.Infrastructure.DependencyManagement;
+using Advertise.Service.Users;
+using Microsoft.Owin.Security.OAuth;
+
+namespace Advertise.Web.Owin
+{
+    public class OwinAuthorizationServerProvider : OAuthAuthorizationServerProvider
+    {
+        public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
+        {
+            context.Validated();
+        }
+ 
+        public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
+        {
+            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+
+            var user = await ContainerManager.Container.GetInstance<IUserService>().FindByPhoneNumberAsync(context.UserName, context.Password);
+ 
+            if (user == null)
+            {
+                context.SetError("invalid_grant", "The user name or password is incorrect.");
+                return;
+            }
+ 
+            var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+            identity.AddClaim(new Claim("sub", context.UserName));
+            identity.AddClaim(new Claim("role", "user"));
+ 
+            context.Validated(identity);
+        }
+    }
+}

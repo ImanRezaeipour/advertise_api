@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95F7230C-D695-42BA-9A70-D89F60C58261}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Advertise.Service</RootNamespace>
+    <AssemblyName>Advertise.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\DependentDLL\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\DependentDLL\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\DependentDLL\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DependentDLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\DependentDLL\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\DependentDLL\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\DependentDLL\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor">
+      <HintPath>..\DependentDLL\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\DependentDLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JWT">
+      <HintPath>..\DependentDLL\JWT.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit">
+      <HintPath>..\DependentDLL\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\DependentDLL\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\DependentDLL\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\DependentDLL\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\DependentDLL\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcSiteMapProvider">
+      <HintPath>..\DependentDLL\MvcSiteMapProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\DependentDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.VideoConverter">
+      <HintPath>..\DependentDLL\NReco.VideoConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.VideoInfo">
+      <HintPath>..\DependentDLL\NReco.VideoInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="RedLock.StrongName, Version=1.7.4.0, Culture=neutral, PublicKeyToken=1dffde0a6c007f07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\RedLock.StrongName.dll</HintPath>
+    </Reference>
+    <Reference Include="SmsIrRestful">
+      <HintPath>..\DependentDLL\SmsIrRestful.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis.StrongName">
+      <HintPath>..\DependentDLL\StackExchange.Redis.StrongName.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base">
+      <HintPath>..\DependentDLL\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report">
+      <HintPath>..\DependentDLL\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Mvc">
+      <HintPath>..\DependentDLL\Stimulsoft.Report.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web">
+      <HintPath>..\DependentDLL\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.DynamicInterception">
+      <HintPath>..\DependentDLL\StructureMap.DynamicInterception.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Web">
+      <HintPath>..\DependentDLL\StructureMap.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>..\DependentDLL\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\DependentDLL\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\DependentDLL\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\DependentDLL\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Z.EntityFramework.Plus.EF6">
+      <HintPath>..\DependentDLL\Z.EntityFramework.Plus.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Z.ExtensionMethods">
+      <HintPath>..\DependentDLL\Z.ExtensionMethods.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announces\IAnnounceOptionService.cs" />
+    <Compile Include="Announces\IAnnouncePaymentService.cs" />
+    <Compile Include="Announces\IAnnounceReserveService.cs" />
+    <Compile Include="Announces\IAnnounceService.cs" />
+    <Compile Include="Carts\CartService.cs" />
+    <Compile Include="Carts\ICartService.cs" />
+    <Compile Include="Categories\ICategoryFollowService.cs" />
+    <Compile Include="Categories\ICategoryReviewService.cs" />
+    <Compile Include="Categories\ICategoryService.cs" />
+    <Compile Include="Common\ICommonService.cs" />
+    <Compile Include="Common\IListService.cs" />
+    <Compile Include="Common\ListService.cs" />
+    <Compile Include="Companies\ICompanyAttachmentFilService.cs" />
+    <Compile Include="Companies\ICompanyAttachmentService.cs" />
+    <Compile Include="Companies\ICompanyBalanceService.cs" />
+    <Compile Include="Companies\ICompanyConversationService.cs" />
+    <Compile Include="Companies\ICompanyFollowService.cs" />
+    <Compile Include="Companies\ICompanyHourService.cs" />
+    <Compile Include="Companies\ICompanyImageService.cs" />
+    <Compile Include="Companies\ICompanyOfficialService.cs" />
+    <Compile Include="Companies\ICompanyQuestionLikeService.cs" />
+    <Compile Include="Companies\ICompanyQuestionService.cs" />
+    <Compile Include="Companies\ICompanyRateService.cs" />
+    <Compile Include="Companies\ICompanyReserveService.cs" />
+    <Compile Include="Companies\ICompanyReviewService.cs" />
+    <Compile Include="Companies\ICompanyService.cs" />
+    <Compile Include="Companies\ICompanySlideService.cs" />
+    <Compile Include="Companies\ICompanySocialService.cs" />
+    <Compile Include="Companies\ICompanyTagService.cs" />
+    <Compile Include="Companies\ICompanyVideoService.cs" />
+    <Compile Include="Companies\ICompanyVisitService.cs" />
+    <Compile Include="Localizations\CultureHelper.cs" />
+    <Compile Include="Localizations\ILocalizationService.cs" />
+    <Compile Include="Localizations\LocalizationExtension.cs" />
+    <Compile Include="Localizations\LocalizationService.cs" />
+    <Compile Include="Logs\ILogActivityService.cs" />
+    <Compile Include="Logs\ILogAuditService.cs" />
+    <Compile Include="Logs\ILogExceptionService.cs" />
+    <Compile Include="Plans\IPlanDiscountService.cs" />
+    <Compile Include="Plans\IPlanPaymentService.cs" />
+    <Compile Include="Plans\IPlanService.cs" />
+    <Compile Include="Products\IProductCommentLikeService.cs" />
+    <Compile Include="Products\IProductCommentService.cs" />
+    <Compile Include="Products\IProductFeatureService.cs" />
+    <Compile Include="Products\IProductImageService.cs" />
+    <Compile Include="Products\IProductKeywordService.cs" />
+    <Compile Include="Products\IProductLikeService.cs" />
+    <Compile Include="Products\IProductNotifyService.cs" />
+    <Compile Include="Products\IProductRateService.cs" />
+    <Compile Include="Products\IProductReviewService.cs" />
+    <Compile Include="Products\IProductService.cs" />
+    <Compile Include="Products\IProductSpecificationService.cs" />
+    <Compile Include="Products\IProductTagService.cs" />
+    <Compile Include="Products\IProductVisitService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Announces\AnnounceOptionService.cs" />
+    <Compile Include="Announces\AnnouncePaymentService.cs" />
+    <Compile Include="Announces\AnnounceReserveService.cs" />
+    <Compile Include="Announces\AnnounceService.cs" />
+    <Compile Include="Catalogs\CatalogFeatureService.cs" />
+    <Compile Include="Catalogs\CatalogImageService.cs" />
+    <Compile Include="Catalogs\CatalogService.cs" />
+    <Compile Include="Catalogs\CatalogSpecificationService.cs" />
+    <Compile Include="Catalogs\ICatalogFeatureService.cs" />
+    <Compile Include="Catalogs\ICatalogImageService.cs" />
+    <Compile Include="Catalogs\ICatalogService.cs" />
+    <Compile Include="Catalogs\ICatalogSpecificationService.cs" />
+    <Compile Include="Companies\CompanyAttachmentFileService.cs" />
+    <Compile Include="Companies\CompanyReserveService.cs" />
+    <Compile Include="Companies\CompanySlideService.cs" />
+    <Compile Include="Companies\CompanyRateService.cs" />
+    <Compile Include="Companies\CompanyHourService.cs" />
+    <Compile Include="Guarantees\GuaranteeService.cs" />
+    <Compile Include="Guarantees\IGuaranteeService.cs" />
+    <Compile Include="Manufacturers\IManufacturerService.cs" />
+    <Compile Include="Manufacturers\ManufacturerService.cs" />
+    <Compile Include="Receipts\IReceiptOptionService.cs" />
+    <Compile Include="Receipts\IReceiptPaymentService.cs" />
+    <Compile Include="Receipts\IReceiptService.cs" />
+    <Compile Include="Keywords\IKeywordService.cs" />
+    <Compile Include="Permissions\IPermissionService.cs" />
+    <Compile Include="Permissions\PermissionService.cs" />
+    <Compile Include="Products\ProductKeywordService.cs" />
+    <Compile Include="Products\ProductNotifyService.cs" />
+    <Compile Include="Products\ProductRateService.cs" />
+    <Compile Include="Reports\IReportService.cs" />
+    <Compile Include="Reports\ReportService.cs" />
+    <Compile Include="Roles\RoleConst.cs" />
+    <Compile Include="Categories\CategoryExtension.cs" />
+    <Compile Include="Categories\CategoryFollowService.cs" />
+    <Compile Include="Categories\CategoryReviewService.cs" />
+    <Compile Include="Categories\CategoryService.cs" />
+    <Compile Include="Common\CodeConst.cs" />
+    <Compile Include="Common\CommonService.cs" />
+    <Compile Include="Common\JsonExtension.cs" />
+    <Compile Include="Common\PaymentResult.cs" />
+    <Compile Include="Common\ServiceErrorConst.cs" />
+    <Compile Include="Common\ServiceResult.cs" />
+    <Compile Include="Companies\CompanyBalanceService.cs" />
+    <Compile Include="Companies\CompanyExtensions.cs" />
+    <Compile Include="Companies\CompanyOfficialService.cs" />
+    <Compile Include="Keywords\KeywordService.cs" />
+    <Compile Include="Messages\EmailService.cs" />
+    <Compile Include="Messages\IEmailService.cs" />
+    <Compile Include="Messages\ISmsService.cs" />
+    <Compile Include="Messages\SmsService.cs" />
+    <Compile Include="Companies\CompanyAttachmentService.cs" />
+    <Compile Include="Companies\CompanyConversationService.cs" />
+    <Compile Include="Companies\CompanyFollowService.cs" />
+    <Compile Include="Companies\CompanyImageService.cs" />
+    <Compile Include="Companies\CompanyQuestionLikeService.cs" />
+    <Compile Include="Companies\CompanyQuestionService.cs" />
+    <Compile Include="Companies\CompanyReviewService.cs" />
+    <Compile Include="Companies\CompanyService.cs" />
+    <Compile Include="Companies\CompanySocialService.cs" />
+    <Compile Include="Companies\CompanyTagService.cs" />
+    <Compile Include="Companies\CompanyVideoService.cs" />
+    <Compile Include="Companies\CompanyVisitService.cs" />
+    <Compile Include="Complaints\ComplaintService.cs" />
+    <Compile Include="Complaints\IComplaintService.cs" />
+    <Compile Include="Locations\LocationService.cs" />
+    <Compile Include="Locations\LocationCityService.cs" />
+    <Compile Include="Locations\ILocationService.cs" />
+    <Compile Include="Locations\ILocationCityService.cs" />
+    <Compile Include="Logs\LogActivityService.cs" />
+    <Compile Include="Logs\LogAuditService.cs" />
+    <Compile Include="Logs\LogExceptionService.cs" />
+    <Compile Include="Notices\INoticeService.cs" />
+    <Compile Include="Notices\NoticeService.cs" />
+    <Compile Include="Newsletters\INewsletterService.cs" />
+    <Compile Include="Newsletters\NewsletterService.cs" />
+    <Compile Include="Permissions\PermissionConst.cs" />
+    <Compile Include="Plans\PlanDiscountService.cs" />
+    <Compile Include="Plans\PlanPaymentService.cs" />
+    <Compile Include="Plans\PlanService.cs" />
+    <Compile Include="Products\ProductCommentLikeService.cs" />
+    <Compile Include="Products\ProductCommentService.cs" />
+    <Compile Include="Products\ProductExtensions.cs" />
+    <Compile Include="Products\ProductFeatureService.cs" />
+    <Compile Include="Products\ProductImageService.cs" />
+    <Compile Include="Products\ProductLikeService.cs" />
+    <Compile Include="Products\ProductReviewService.cs" />
+    <Compile Include="Products\ProductService.cs" />
+    <Compile Include="Products\ProductSpecificationService.cs" />
+    <Compile Include="Products\ProductTagService.cs" />
+    <Compile Include="Products\ProductVisitService.cs" />
+    <Compile Include="Receipts\ReceiptOptionService.cs" />
+    <Compile Include="Receipts\ReceiptPaymentService.cs" />
+    <Compile Include="Receipts\ReceiptService.cs" />
+    <Compile Include="Seos\ISeoService.cs" />
+    <Compile Include="Seos\ISeoSettingService.cs" />
+    <Compile Include="Seos\ISeoUrlService.cs" />
+    <Compile Include="Seos\SeoService.cs" />
+    <Compile Include="Seos\SeoSettingService.cs" />
+    <Compile Include="Seos\SeoUrlService.cs" />
+    <Compile Include="Settings\ISettingService.cs" />
+    <Compile Include="Settings\SettingService.cs" />
+    <Compile Include="Specifications\ISpecificationOptionService.cs" />
+    <Compile Include="Specifications\ISpecificationService.cs" />
+    <Compile Include="Specifications\SpecificationOptionService.cs" />
+    <Compile Include="Specifications\SpecificationService.cs" />
+    <Compile Include="Statistics\IStatisticService.cs" />
+    <Compile Include="Statistics\StatisticService.cs" />
+    <Compile Include="Tags\ITagService.cs" />
+    <Compile Include="Tags\TagService.cs" />
+    <Compile Include="Users\IUserNotificationService.cs" />
+    <Compile Include="Users\IUserAccountService.cs" />
+    <Compile Include="Users\IUserAuthenticationManager.cs" />
+    <Compile Include="Users\IUserBudgetService.cs" />
+    <Compile Include="Users\IUserClaimService.cs" />
+    <Compile Include="Users\IUserClaimsIdentityFactory.cs" />
+    <Compile Include="Users\IUserLoginService.cs" />
+    <Compile Include="Users\IUserOnlineService.cs" />
+    <Compile Include="Users\IUserOperationServive.cs" />
+    <Compile Include="Users\IUserPasswordValidator.cs" />
+    <Compile Include="Users\IUserService.cs" />
+    <Compile Include="Users\IUserSettingService.cs" />
+    <Compile Include="Users\IUserSignInService.cs" />
+    <Compile Include="Users\IUserValidator.cs" />
+    <Compile Include="Users\IUserViolationService.cs" />
+    <Compile Include="Users\UserNotificationService.cs" />
+    <Compile Include="Users\UserAccountService.cs" />
+    <Compile Include="Users\UserPasswordValidator.cs" />
+    <Compile Include="Users\UserSecurityStampValidator.cs" />
+    <Compile Include="Users\UserValidator.cs" />
+    <Compile Include="Users\UserAuthenticationManager.cs" />
+    <Compile Include="Users\UserClaimsIdentityConst.cs" />
+    <Compile Include="Users\UserClaimsIdentityFactory.cs" />
+    <Compile Include="Roles\IRoleService.cs" />
+    <Compile Include="Roles\RoleService.cs" />
+    <Compile Include="Users\UserSignInService.cs" />
+    <Compile Include="Users\UserBudgetService.cs" />
+    <Compile Include="Users\UserClaimService.cs" />
+    <Compile Include="Users\UserExtension.cs" />
+    <Compile Include="Users\UserLoginService.cs" />
+    <Compile Include="Users\UserOnlineService.cs" />
+    <Compile Include="Users\UserOperationServive.cs" />
+    <Compile Include="Users\UserService.cs" />
+    <Compile Include="Users\UserSettingService.cs" />
+    <Compile Include="Users\UserViolationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Advertise.Core.Domain\Advertise.Core.Domain.csproj">
+      <Project>{eb51b3be-3b54-44e3-96c0-de73adf044bf}</Project>
+      <Name>Advertise.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core.Mapping\Advertise.Core.Mapping.csproj">
+      <Project>{286d408c-c962-4b6a-b63d-cd7f69d8fd5c}</Project>
+      <Name>Advertise.Core.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core.Model\Advertise.Core.Model.csproj">
+      <Project>{0c321638-91a4-4298-8a24-c63146d20884}</Project>
+      <Name>Advertise.Core.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core.Profile\Advertise.Core.Profile.csproj">
+      <Project>{2e65d7c3-c6b8-4982-87f1-fa0c8f9ec7df}</Project>
+      <Name>Advertise.Core.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core\Advertise.Core.csproj">
+      <Project>{b4666778-7fbb-4682-abe8-b90a72ba60c1}</Project>
+      <Name>Advertise.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Data.Validation\Advertise.Data.Validation.csproj">
+      <Project>{20e142e0-5177-4d79-a553-5e7c18e46fc6}</Project>
+      <Name>Advertise.Data.Validation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Data\Advertise.Data.csproj">
+      <Project>{02339557-e292-480b-8f02-2d1c582473ed}</Project>
+      <Name>Advertise.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

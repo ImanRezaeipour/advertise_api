@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20E142E0-5177-4D79-A553-5E7C18E46FC6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Advertise.Data.Validation</RootNamespace>
+    <AssemblyName>Advertise.Data.Validation</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>..\DependentDLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0">
+      <HintPath>..\DependentDLL\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announces\AnnounceOptionCreateValidator.cs" />
+    <Compile Include="Categories\CategoryCreateValidator.cs" />
+    <Compile Include="Categories\CategoryEditValidator.cs" />
+    <Compile Include="Categories\CategoryReviewCreateValidator.cs" />
+    <Compile Include="Categories\CategoryReviewEditValidator.cs" />
+    <Compile Include="Common\BaseValidator.cs" />
+    <Compile Include="Common\FieldValidationHelper.cs" />
+    <Compile Include="Common\FluentValidationExtention.cs" />
+    <Compile Include="Common\IModelValidator.cs" />
+    <Compile Include="Common\IsNotNullGuidValidate.cs" />
+    <Compile Include="Common\ModelValidator.cs" />
+    <Compile Include="Common\ObjectValidator.cs" />
+    <Compile Include="Common\PasswordExtension.cs" />
+    <Compile Include="Companies\CompanyAttachmentCreateValidator.cs" />
+    <Compile Include="Companies\CompanyAttachmentEditValidator.cs" />
+    <Compile Include="Companies\CompanyBalanceCreateValidator.cs" />
+    <Compile Include="Companies\CompanyBalanceEditValidator.cs" />
+    <Compile Include="Companies\CompanyCreateValidator.cs" />
+    <Compile Include="Companies\CompanyEditValidator.cs" />
+    <Compile Include="Companies\CompanyImageCreateValidator.cs" />
+    <Compile Include="Companies\CompanyImageEditValidator.cs" />
+    <Compile Include="Companies\CompanyQuestionCreateValidator.cs" />
+    <Compile Include="Companies\CompanyQuestionEditValidator.cs" />
+    <Compile Include="Companies\CompanyReviewCreateValidator.cs" />
+    <Compile Include="Companies\CompanyReviewEditValidator.cs" />
+    <Compile Include="Companies\CompanyVideoCreateValidator.cs" />
+    <Compile Include="Companies\CompanyVideoEditValidator.cs" />
+    <Compile Include="Complaints\ComplaintCreateValidator.cs" />
+    <Compile Include="Manufacturers\ManufacturerCreateValidator.cs" />
+    <Compile Include="Manufacturers\ManufacturerEditValidator.cs" />
+    <Compile Include="Newsletters\NewsletterCreateValidator.cs" />
+    <Compile Include="Notices\NoticeCreateValidator.cs" />
+    <Compile Include="Notices\NoticeEditValidator.cs" />
+    <Compile Include="Plans\PlanCreateValidator.cs" />
+    <Compile Include="Plans\PlanDiscountCreateValidator.cs" />
+    <Compile Include="Plans\PlanDiscountEditValidator.cs" />
+    <Compile Include="Plans\PlanEditValidator.cs" />
+    <Compile Include="Products\ProductBulkCreateValidator.cs" />
+    <Compile Include="Products\ProductBulkEditValidator.cs" />
+    <Compile Include="Products\ProductBulkValidator.cs" />
+    <Compile Include="Products\ProductCommentCreateValidator.cs" />
+    <Compile Include="Products\ProductCommentEditValidator.cs" />
+    <Compile Include="Products\ProductCreateValidator.cs" />
+    <Compile Include="Products\ProductEditValidator.cs" />
+    <Compile Include="Products\ProductReviewCreateValidator.cs" />
+    <Compile Include="Products\ProductReviewEditValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipts\ReceiptCreateValidator.cs" />
+    <Compile Include="Roles\RoleCreateValidator.cs" />
+    <Compile Include="Roles\RoleEditValidator.cs" />
+    <Compile Include="Seos\SeoSettingEditValidator.cs" />
+    <Compile Include="Seos\SeoUrEditValidator.cs" />
+    <Compile Include="Seos\SeoUrlCreateValidator.cs" />
+    <Compile Include="Specifications\SpecificationCreateValidator.cs" />
+    <Compile Include="Specifications\SpecificationEditValidator.cs" />
+    <Compile Include="Specifications\SpecificationOptionCreateValidator.cs" />
+    <Compile Include="Specifications\SpecificationOptionEditValidator.cs" />
+    <Compile Include="Tags\TagCreateValidator.cs" />
+    <Compile Include="Tags\TagEditValidator.cs" />
+    <Compile Include="Users\UserForgotPasswordValidator.cs" />
+    <Compile Include="Users\UserLoginValidator.cs" />
+    <Compile Include="Users\UserRegisterValidator.cs" />
+    <Compile Include="Users\UserResetPasswordValidator.cs" />
+    <Compile Include="Users\UserAddPhoneNumberValidator.cs" />
+    <Compile Include="Users\UserEditMeValidator.cs" />
+    <Compile Include="Users\UserEditValidator.cs" />
+    <Compile Include="Users\UserOperatorCreateValidator.cs" />
+    <Compile Include="Users\UserSettingEditValidator.cs" />
+    <Compile Include="Users\UserVerifyPhoneNumberValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Advertise.Core.Model\Advertise.Core.Model.csproj">
+      <Project>{0c321638-91a4-4298-8a24-c63146d20884}</Project>
+      <Name>Advertise.Core.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core\Advertise.Core.csproj">
+      <Project>{b4666778-7fbb-4682-abe8-b90a72ba60c1}</Project>
+      <Name>Advertise.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

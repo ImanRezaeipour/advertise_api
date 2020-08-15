@@ -1,0 +1,145 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Core", "Advertise.Core\Advertise.Core.csproj", "{B4666778-7FBB-4682-ABE8-B90A72BA60C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Data", "Advertise.Data\Advertise.Data.csproj", "{02339557-E292-480B-8F02-2D1C582473ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Service", "Advertise.Service\Advertise.Service.csproj", "{95F7230C-D695-42BA-9A70-D89F60C58261}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Core.Domain", "Advertise.Core.Domain\Advertise.Core.Domain.csproj", "{EB51B3BE-3B54-44E3-96C0-DE73ADF044BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Core.Model", "Advertise.Core.Model\Advertise.Core.Model.csproj", "{0C321638-91A4-4298-8A24-C63146D20884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Core.Profile", "Advertise.Core.Profile\Advertise.Core.Profile.csproj", "{2E65D7C3-C6B8-4982-87F1-FA0C8F9EC7DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Service.Event", "Advertise.Service.Event\Advertise.Service.Event.csproj", "{582382B3-89D3-4D9A-A9F8-394B60DE785E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Service.Factory", "Advertise.Service.Factory\Advertise.Service.Factory.csproj", "{622820D1-3828-4D5D-80EA-ED8206696416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Core.Mapping", "Advertise.Core.Mapping\Advertise.Core.Mapping.csproj", "{286D408C-C962-4B6A-B63D-CD7F69D8FD5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Data.Validation", "Advertise.Data.Validation\Advertise.Data.Validation.csproj", "{20E142E0-5177-4D79-A553-5E7C18E46FC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Web", "Advertise.Web\Advertise.Web.csproj", "{1148B3AF-F65B-4643-BDDB-D9E3F319BA60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advertise.Web.Api", "Advertise.Web.Api\Advertise.Web.Api.csproj", "{E4382658-9402-4282-8A61-F11B4C7FF248}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4666778-7FBB-4682-ABE8-B90A72BA60C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4666778-7FBB-4682-ABE8-B90A72BA60C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4666778-7FBB-4682-ABE8-B90A72BA60C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4666778-7FBB-4682-ABE8-B90A72BA60C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02339557-E292-480B-8F02-2D1C582473ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02339557-E292-480B-8F02-2D1C582473ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02339557-E292-480B-8F02-2D1C582473ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02339557-E292-480B-8F02-2D1C582473ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F7230C-D695-42BA-9A70-D89F60C58261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F7230C-D695-42BA-9A70-D89F60C58261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F7230C-D695-42BA-9A70-D89F60C58261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F7230C-D695-42BA-9A70-D89F60C58261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB51B3BE-3B54-44E3-96C0-DE73ADF044BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB51B3BE-3B54-44E3-96C0-DE73ADF044BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB51B3BE-3B54-44E3-96C0-DE73ADF044BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB51B3BE-3B54-44E3-96C0-DE73ADF044BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C321638-91A4-4298-8A24-C63146D20884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C321638-91A4-4298-8A24-C63146D20884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C321638-91A4-4298-8A24-C63146D20884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C321638-91A4-4298-8A24-C63146D20884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E65D7C3-C6B8-4982-87F1-FA0C8F9EC7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E65D7C3-C6B8-4982-87F1-FA0C8F9EC7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E65D7C3-C6B8-4982-87F1-FA0C8F9EC7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E65D7C3-C6B8-4982-87F1-FA0C8F9EC7DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582382B3-89D3-4D9A-A9F8-394B60DE785E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582382B3-89D3-4D9A-A9F8-394B60DE785E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582382B3-89D3-4D9A-A9F8-394B60DE785E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582382B3-89D3-4D9A-A9F8-394B60DE785E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{622820D1-3828-4D5D-80EA-ED8206696416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{622820D1-3828-4D5D-80EA-ED8206696416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{622820D1-3828-4D5D-80EA-ED8206696416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{622820D1-3828-4D5D-80EA-ED8206696416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286D408C-C962-4B6A-B63D-CD7F69D8FD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286D408C-C962-4B6A-B63D-CD7F69D8FD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286D408C-C962-4B6A-B63D-CD7F69D8FD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286D408C-C962-4B6A-B63D-CD7F69D8FD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E142E0-5177-4D79-A553-5E7C18E46FC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E142E0-5177-4D79-A553-5E7C18E46FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E142E0-5177-4D79-A553-5E7C18E46FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E142E0-5177-4D79-A553-5E7C18E46FC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1148B3AF-F65B-4643-BDDB-D9E3F319BA60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1148B3AF-F65B-4643-BDDB-D9E3F319BA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1148B3AF-F65B-4643-BDDB-D9E3F319BA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1148B3AF-F65B-4643-BDDB-D9E3F319BA60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4382658-9402-4282-8A61-F11B4C7FF248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4382658-9402-4282-8A61-F11B4C7FF248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4382658-9402-4282-8A61-F11B4C7FF248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4382658-9402-4282-8A61-F11B4C7FF248}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60DAA913-96C4-43D2-A18D-E3382A1B5D00}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 17
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rezaeipour.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Advertise.Core\\Advertise.Core.csproj
+		SccProjectName1 = Advertise.Core
+		SccLocalPath1 = Advertise.Core
+		SccProjectUniqueName2 = Advertise.Data\\Advertise.Data.csproj
+		SccProjectName2 = Advertise.Data
+		SccLocalPath2 = Advertise.Data
+		SccProjectUniqueName3 = Advertise.Service\\Advertise.Service.csproj
+		SccProjectName3 = Advertise.Service
+		SccLocalPath3 = Advertise.Service
+		SccProjectUniqueName4 = Advertise.Web.Framework\\Advertise.Web.Framework.csproj
+		SccProjectName4 = Advertise.Web.Framework
+		SccLocalPath4 = Advertise.Web.Framework
+		SccProjectUniqueName5 = Advertise.Web\\Advertise.Web.csproj
+		SccProjectName5 = Advertise.Web
+		SccLocalPath5 = Advertise.Web
+		SccProjectUniqueName6 = Advertise.Web.Admin\\Advertise.Web.Admin.csproj
+		SccProjectName6 = Advertise.Web.Admin
+		SccLocalPath6 = Advertise.Web.Admin
+		SccProjectUniqueName7 = Advertise.Core.Domain\\Advertise.Core.Domain.csproj
+		SccProjectName7 = Advertise.Core.Domain
+		SccLocalPath7 = Advertise.Core.Domain
+		SccProjectUniqueName8 = Advertise.Core.Model\\Advertise.Core.Model.csproj
+		SccProjectName8 = Advertise.Core.Model
+		SccLocalPath8 = Advertise.Core.Model
+		SccProjectUniqueName9 = Advertise.Core.Profile\\Advertise.Core.Profile.csproj
+		SccProjectName9 = Advertise.Core.Profile
+		SccLocalPath9 = Advertise.Core.Profile
+		SccProjectUniqueName10 = Advertise.Service.Manager\\Advertise.Service.Manager.csproj
+		SccProjectName10 = Advertise.Service.Manager
+		SccLocalPath10 = Advertise.Service.Manager
+		SccProjectUniqueName11 = Advertise.Data.Mapping\\Advertise.Data.Mapping.csproj
+		SccProjectName11 = Advertise.Data.Mapping
+		SccLocalPath11 = Advertise.Data.Mapping
+		SccProjectUniqueName12 = Advertise.Service.Aspect\\Advertise.Service.Aspect.csproj
+		SccProjectName12 = Advertise.Service.Aspect
+		SccLocalPath12 = Advertise.Service.Aspect
+		SccProjectUniqueName13 = Advertise.Service.Event\\Advertise.Service.Event.csproj
+		SccProjectName13 = Advertise.Service.Event
+		SccLocalPath13 = Advertise.Service.Event
+		SccProjectUniqueName14 = Advertise.Service.Factory\\Advertise.Service.Factory.csproj
+		SccProjectName14 = Advertise.Service.Factory
+		SccLocalPath14 = Advertise.Service.Factory
+		SccProjectUniqueName15 = Advertise.Service.Validator\\Advertise.Service.Validator.csproj
+		SccProjectName15 = Advertise.Service.Validator
+		SccLocalPath15 = Advertise.Service.Validator
+		SccProjectUniqueName16 = Advertise.Service.Initializer\\Advertise.Service.Initializer.csproj
+		SccProjectName16 = Advertise.Service.Initializer
+		SccLocalPath16 = Advertise.Service.Initializer
+	EndGlobalSection
+EndGlobal

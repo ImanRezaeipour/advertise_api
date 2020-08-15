@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E65D7C3-C6B8-4982-87F1-FA0C8F9EC7DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Advertise.Core.Profile</RootNamespace>
+    <AssemblyName>Advertise.Core.Profile</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\DependentDLL\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announces\AnnounceOptionProfile.cs" />
+    <Compile Include="Announces\AnnouncePaymentProfile.cs" />
+    <Compile Include="Announces\AnnounceReserveProfile.cs" />
+    <Compile Include="Catalogs\CatalogFeatureProfile.cs" />
+    <Compile Include="Catalogs\CatalogImageProfile.cs" />
+    <Compile Include="Catalogs\CatalogKeywordProfile.cs" />
+    <Compile Include="Catalogs\CatalogSpecificationProfile.cs" />
+    <Compile Include="Categories\CategoryFollowProfile.cs" />
+    <Compile Include="Categories\CategoryOptionProfile.cs" />
+    <Compile Include="Categories\CategoryReviewProfile.cs" />
+    <Compile Include="Companies\CompanyAttachmentFileProfile.cs" />
+    <Compile Include="Companies\CompanyAttachmentProfile.cs" />
+    <Compile Include="Companies\CompanyBalanceProfile.cs" />
+    <Compile Include="Companies\CompanyConversationProfile.cs" />
+    <Compile Include="Companies\CompanyFollowProfile.cs" />
+    <Compile Include="Companies\CompanyHourProfile.cs" />
+    <Compile Include="Companies\CompanyImageFileProfile.cs" />
+    <Compile Include="Companies\CompanyImageProfile.cs" />
+    <Compile Include="Companies\CompanyOfficialProfile.cs" />
+    <Compile Include="Companies\CompanyQuestionLikeProfile.cs" />
+    <Compile Include="Companies\CompanyQuestionProfile.cs" />
+    <Compile Include="Companies\CompanyRateProfile.cs" />
+    <Compile Include="Companies\CompanyReviewProfile.cs" />
+    <Compile Include="Companies\CompanySlideProfile.cs" />
+    <Compile Include="Companies\CompanySocialProfile.cs" />
+    <Compile Include="Companies\CompanyTagProfile.cs" />
+    <Compile Include="Companies\CompanyVideoFileProfile.cs" />
+    <Compile Include="Companies\CompanyVideoProfile.cs" />
+    <Compile Include="Locations\LocationProfile.cs" />
+    <Compile Include="Announces\AnnounceProfile.cs" />
+    <Compile Include="Carts\CartProfile.cs" />
+    <Compile Include="Catalogs\CatalogProfile.cs" />
+    <Compile Include="Categories\CategoryExtension.cs" />
+    <Compile Include="Categories\CategoryProfile.cs" />
+    <Compile Include="Common\BaseProfile.cs" />
+    <Compile Include="Common\BaseProfileExtension.cs" />
+    <Compile Include="Common\TypeConverterProfile.cs" />
+    <Compile Include="Companies\CompanyProfile.cs" />
+    <Compile Include="Complaints\ComplaintProfile.cs" />
+    <Compile Include="Guarantees\GuaranteeProfile.cs" />
+    <Compile Include="Keywords\KeywordProfile.cs" />
+    <Compile Include="Locations\LocationCityProfile.cs" />
+    <Compile Include="Manufacturers\ManufacturerProfile.cs" />
+    <Compile Include="Notices\NewsProfile.cs" />
+    <Compile Include="Newsletters\NewsletterProfile.cs" />
+    <Compile Include="Permissions\PermissionProfile.cs" />
+    <Compile Include="Plans\PlanDiscountProfile.cs" />
+    <Compile Include="Plans\PlanPaymentProfile.cs" />
+    <Compile Include="Plans\PlanProfile.cs" />
+    <Compile Include="Products\ProductCommentProfile.cs" />
+    <Compile Include="Products\ProductFeatureProfile.cs" />
+    <Compile Include="Products\ProductImageProfile.cs" />
+    <Compile Include="Products\ProductKeywordProfile.cs" />
+    <Compile Include="Products\ProductLikeProfile.cs" />
+    <Compile Include="Products\ProductNotifyProfile.cs" />
+    <Compile Include="Products\ProductProfile.cs" />
+    <Compile Include="Products\ProductRateProfile.cs" />
+    <Compile Include="Products\ProductReviewProfile.cs" />
+    <Compile Include="Products\ProductSpecificationProfile.cs" />
+    <Compile Include="Products\ProductTagProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipts\ReceiptOptionProfile.cs" />
+    <Compile Include="Receipts\ReceiptPaymentProfile.cs" />
+    <Compile Include="Receipts\ReceiptProfile.cs" />
+    <Compile Include="Reports\ReportProfile.cs" />
+    <Compile Include="Roles\RolePermissionProfile.cs" />
+    <Compile Include="Roles\RoleProfile.cs" />
+    <Compile Include="Seos\SeoProfile.cs" />
+    <Compile Include="Seos\SeoSettingProfile.cs" />
+    <Compile Include="Seos\SeoUrlProfile.cs" />
+    <Compile Include="Settings\SettingProfile.cs" />
+    <Compile Include="Settings\SettingTransactionProfile.cs" />
+    <Compile Include="Smses\SmsOperatorProfile.cs" />
+    <Compile Include="Specifications\SpecificationOptionProfile.cs" />
+    <Compile Include="Specifications\SpecificationProfile.cs" />
+    <Compile Include="Statistics\StatisticProfile.cs" />
+    <Compile Include="Tags\TagProfile.cs" />
+    <Compile Include="Users\UserNotificationProfile.cs" />
+    <Compile Include="Users\UserOnlineProfile.cs" />
+    <Compile Include="Users\UserOperatorProfile.cs" />
+    <Compile Include="Users\UserProfile.cs" />
+    <Compile Include="Users\UserSettingProfile.cs" />
+    <Compile Include="Users\UserViolationProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Advertise.Core.Domain\Advertise.Core.Domain.csproj">
+      <Project>{eb51b3be-3b54-44e3-96c0-de73adf044bf}</Project>
+      <Name>Advertise.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core.Model\Advertise.Core.Model.csproj">
+      <Project>{0c321638-91a4-4298-8a24-c63146d20884}</Project>
+      <Name>Advertise.Core.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core\Advertise.Core.csproj">
+      <Project>{b4666778-7fbb-4682-abe8-b90a72ba60c1}</Project>
+      <Name>Advertise.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

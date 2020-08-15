@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02339557-E292-480B-8F02-2D1C582473ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Advertise.Data</RootNamespace>
+    <AssemblyName>Advertise.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ElmahEFLogger">
+      <HintPath>..\DependentDLL\ElmahEFLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DependentDLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\DependentDLL\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Z.EntityFramework.Plus.EF6">
+      <HintPath>..\DependentDLL\Z.EntityFramework.Plus.EF6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbConfigs\ApplicationDbMigrationsConfiguration.cs" />
+    <Compile Include="DBMigrations\201903261140202_Migration_V1.cs" />
+    <Compile Include="DBMigrations\201903261140202_Migration_V1.Designer.cs">
+      <DependentUpon>201903261140202_Migration_V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBMigrations\StoredProcedures_V1.cs" />
+    <Compile Include="Extensions\DbContextExtensions.cs" />
+    <Compile Include="Extensions\QueryableExtensions.cs" />
+    <Compile Include="Interceptors\YeKePersian.cs" />
+    <Compile Include="Interceptors\YeKePersianInterceptor.cs" />
+    <Compile Include="DbConfigs\ApplicationDbConfiguration.cs" />
+    <Compile Include="Constants\UowConst.cs" />
+    <Compile Include="Conventions\PluralizeConvention.cs" />
+    <Compile Include="DbContexts\BaseDbContext.cs" />
+    <Compile Include="DbContexts\IUnitOfWork.cs" />
+    <Compile Include="Migrations\ApplicationSqlServerMigrationSqlGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Advertise.Core.Domain\Advertise.Core.Domain.csproj">
+      <Project>{eb51b3be-3b54-44e3-96c0-de73adf044bf}</Project>
+      <Name>Advertise.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core.Mapping\Advertise.Core.Mapping.csproj">
+      <Project>{286d408c-c962-4b6a-b63d-cd7f69d8fd5c}</Project>
+      <Name>Advertise.Core.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core\Advertise.Core.csproj">
+      <Project>{b4666778-7fbb-4682-abe8-b90a72ba60c1}</Project>
+      <Name>Advertise.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Initializers\1_User_Seed.sql" />
+    <Content Include="Initializers\2_Role_Seed.sql" />
+    <Content Include="Initializers\3_UserRole_Seed.sql" />
+    <Content Include="Initializers\4_City_Seed.sql" />
+    <Content Include="Initializers\5_Category_Seed.sql" />
+    <Content Include="Initializers\6_UserMeta_Seed.sql" />
+    <Content Include="Initializers\7_Address_Seed.sql" />
+    <Content Include="Initializers\8_Company_Seed.sql" />
+    <Content Include="Initializers\category.sql" />
+    <Content Include="Initializers\setting.sql" />
+    <Content Include="Initializers\user.sql" />
+    <Content Include="Scripts\Create the ELMAH database On SQLServer.sql" />
+    <Content Include="Scripts\SnapshotIsolationScript.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBMigrations\201903261140202_Migration_V1.resx">
+      <DependentUpon>201903261140202_Migration_V1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

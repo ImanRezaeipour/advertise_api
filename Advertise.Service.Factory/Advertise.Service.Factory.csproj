@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{622820D1-3828-4D5D-80EA-ED8206696416}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Advertise.Service.Factory</RootNamespace>
+    <AssemblyName>Advertise.Service.Factory</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\DependentDLL\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DependentDLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\DependentDLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\DependentDLL\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DependentDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\DependentDLL\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\DependentDLL\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.ExtensionMethods">
+      <HintPath>..\DependentDLL\Z.ExtensionMethods.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announces\AnnounceFactory.cs" />
+    <Compile Include="Announces\AnnounceOptionFactory.cs" />
+    <Compile Include="Announces\AnnouncePaymentFactory.cs" />
+    <Compile Include="Announces\IAnnounceFactory.cs" />
+    <Compile Include="Announces\IAnnounceOptionFactory.cs" />
+    <Compile Include="Announces\IAnnouncePaymentFactory.cs" />
+    <Compile Include="Carts\CartFactory.cs" />
+    <Compile Include="Carts\ICartFactory.cs" />
+    <Compile Include="Catalogs\CatalogFactory.cs" />
+    <Compile Include="Catalogs\ICatalogFactory.cs" />
+    <Compile Include="Categories\CategoryFactory.cs" />
+    <Compile Include="Categories\CategoryFollowFactory.cs" />
+    <Compile Include="Categories\CategoryReviewFactory.cs" />
+    <Compile Include="Categories\ICategoryFactory.cs" />
+    <Compile Include="Categories\ICategoryFollowFactory.cs" />
+    <Compile Include="Categories\ICategoryReviewFactory.cs" />
+    <Compile Include="Common\ICommonFactory.cs" />
+    <Compile Include="Companies\CompanyAttachmentFactory.cs" />
+    <Compile Include="Companies\CompanyBalanceFactory.cs" />
+    <Compile Include="Companies\CompanyConversationFactory.cs" />
+    <Compile Include="Companies\CompanyFactory.cs" />
+    <Compile Include="Companies\CompanyFollowFactory.cs" />
+    <Compile Include="Companies\CompanyHourFactory.cs" />
+    <Compile Include="Companies\CompanyImageFactory.cs" />
+    <Compile Include="Companies\CompanyOfficialFactory.cs" />
+    <Compile Include="Companies\CompanyQuestionFactory.cs" />
+    <Compile Include="Companies\CompanyReviewFactory.cs" />
+    <Compile Include="Companies\CompanySlideFactory.cs" />
+    <Compile Include="Companies\CompanySocialFactory.cs" />
+    <Compile Include="Companies\CompanyTagFactory.cs" />
+    <Compile Include="Companies\CompanyVideoFactory.cs" />
+    <Compile Include="Companies\ICompanyAttachmentFactory.cs" />
+    <Compile Include="Companies\ICompanyBalanceFactory.cs" />
+    <Compile Include="Companies\ICompanyConversationFactory.cs" />
+    <Compile Include="Companies\ICompanyFactory.cs" />
+    <Compile Include="Companies\ICompanyFollowFactory.cs" />
+    <Compile Include="Companies\ICompanyHourFactory.cs" />
+    <Compile Include="Companies\ICompanyImageFactory.cs" />
+    <Compile Include="Companies\ICompanyOfficialFactory.cs" />
+    <Compile Include="Companies\ICompanyQuestionFactory.cs" />
+    <Compile Include="Companies\ICompanyReviewFactory.cs" />
+    <Compile Include="Companies\ICompanySlideFactory.cs" />
+    <Compile Include="Companies\ICompanySocialFactory.cs" />
+    <Compile Include="Companies\ICompanyTagFactory.cs" />
+    <Compile Include="Companies\ICompanyVideoFactory.cs" />
+    <Compile Include="Complaints\ComplaintFactory.cs" />
+    <Compile Include="Complaints\IComplaintFactory.cs" />
+    <Compile Include="Guarantees\GuaranteeFactory.cs" />
+    <Compile Include="Guarantees\IGuaranteeFactory.cs" />
+    <Compile Include="Common\CommonFactory.cs" />
+    <Compile Include="Locations\ILocationCityFactory.cs" />
+    <Compile Include="Locations\ILocationFactory.cs" />
+    <Compile Include="Locations\LocationFactory.cs" />
+    <Compile Include="Locations\LocationCityFactory.cs" />
+    <Compile Include="Manufacturers\IManufacturerFactory.cs" />
+    <Compile Include="Manufacturers\ManufacturerFactory.cs" />
+    <Compile Include="Messages\EmailFactory.cs" />
+    <Compile Include="Messages\IEmailFactory.cs" />
+    <Compile Include="Messages\ISmsFactory.cs" />
+    <Compile Include="Messages\SmsFactory.cs" />
+    <Compile Include="Newsletters\INewsletterFactory.cs" />
+    <Compile Include="Notices\INoticeFactory.cs" />
+    <Compile Include="Notices\NoticeFactory.cs" />
+    <Compile Include="Newsletters\NewsletterFactory.cs" />
+    <Compile Include="Permissions\IPermissionFactory.cs" />
+    <Compile Include="Permissions\PermissionFactory.cs" />
+    <Compile Include="Plans\IPlanDiscountFactory.cs" />
+    <Compile Include="Plans\IPlanFactory.cs" />
+    <Compile Include="Plans\IPlanPaymentFactory.cs" />
+    <Compile Include="Plans\PlanDiscountFactory.cs" />
+    <Compile Include="Plans\PlanFactory.cs" />
+    <Compile Include="Plans\PlanPaymentFactory.cs" />
+    <Compile Include="Products\IProductCommentFactory.cs" />
+    <Compile Include="Products\IProductCommentLikeFactory.cs" />
+    <Compile Include="Products\IProductFactory.cs" />
+    <Compile Include="Products\IProductFeatureFactory.cs" />
+    <Compile Include="Products\IProductImageFactory.cs" />
+    <Compile Include="Products\IProductLikeFactory.cs" />
+    <Compile Include="Products\IProductReviewFactory.cs" />
+    <Compile Include="Products\IProductSpecificationFactory.cs" />
+    <Compile Include="Products\IProductTagFactory.cs" />
+    <Compile Include="Products\ProductCommentFactory.cs" />
+    <Compile Include="Products\ProductCommentLikeFactory.cs" />
+    <Compile Include="Products\ProductFactory.cs" />
+    <Compile Include="Products\ProductFeatureFactory.cs" />
+    <Compile Include="Products\ProductImageFactory.cs" />
+    <Compile Include="Products\ProductLikeFactory.cs" />
+    <Compile Include="Products\ProductReviewFactory.cs" />
+    <Compile Include="Products\ProductSpecificationFactory.cs" />
+    <Compile Include="Products\ProductTagFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipts\IReceiptFactory.cs" />
+    <Compile Include="Receipts\IReceiptOptionFactory.cs" />
+    <Compile Include="Receipts\IReceiptPaymentFactory.cs" />
+    <Compile Include="Receipts\ReceiptFactory.cs" />
+    <Compile Include="Receipts\ReceiptOptionFactory.cs" />
+    <Compile Include="Receipts\ReceiptPaymentFactory.cs" />
+    <Compile Include="Reports\IReportFactory.cs" />
+    <Compile Include="Reports\ReportFactory.cs" />
+    <Compile Include="Roles\IRoleFactory.cs" />
+    <Compile Include="Roles\RoleFactory.cs" />
+    <Compile Include="Seos\ISeoSettingFactory.cs" />
+    <Compile Include="Seos\ISeoUrlFactory.cs" />
+    <Compile Include="Seos\SeoSettingFactory.cs" />
+    <Compile Include="Seos\SeoUrlFactory.cs" />
+    <Compile Include="Settings\ISettingFactory.cs" />
+    <Compile Include="Settings\SettingFactory.cs" />
+    <Compile Include="Specifications\ISpecificationFactory.cs" />
+    <Compile Include="Specifications\ISpecificationOptionFactory.cs" />
+    <Compile Include="Specifications\SpecificationFactory.cs" />
+    <Compile Include="Specifications\SpecificationOptionFactory.cs" />
+    <Compile Include="Statistics\IStatisticFactory.cs" />
+    <Compile Include="Statistics\StatisticFactory.cs" />
+    <Compile Include="Tags\ITagFactory.cs" />
+    <Compile Include="Tags\TagFactory.cs" />
+    <Compile Include="Users\IUserNotificationFactory.cs" />
+    <Compile Include="Users\IUserAccountFactory.cs" />
+    <Compile Include="Users\IUserBudgetFactory.cs" />
+    <Compile Include="Users\IUserFactory.cs" />
+    <Compile Include="Users\IUserOperatorFactory.cs" />
+    <Compile Include="Users\IUserSettingFactory.cs" />
+    <Compile Include="Users\IUserViolationFactory.cs" />
+    <Compile Include="Users\UserNotificationFactory.cs" />
+    <Compile Include="Users\UserAccountFactory.cs" />
+    <Compile Include="Users\UserBudgetFactory.cs" />
+    <Compile Include="Users\UserFactory.cs" />
+    <Compile Include="Users\UserOperatorFactory.cs" />
+    <Compile Include="Users\UserSettingFactory.cs" />
+    <Compile Include="Users\UserViolationFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Advertise.Core.Domain\Advertise.Core.Domain.csproj">
+      <Project>{eb51b3be-3b54-44e3-96c0-de73adf044bf}</Project>
+      <Name>Advertise.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core.Model\Advertise.Core.Model.csproj">
+      <Project>{0c321638-91a4-4298-8a24-c63146d20884}</Project>
+      <Name>Advertise.Core.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core.Profile\Advertise.Core.Profile.csproj">
+      <Project>{2e65d7c3-c6b8-4982-87f1-fa0c8f9ec7df}</Project>
+      <Name>Advertise.Core.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Core\Advertise.Core.csproj">
+      <Project>{b4666778-7fbb-4682-abe8-b90a72ba60c1}</Project>
+      <Name>Advertise.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Advertise.Service\Advertise.Service.csproj">
+      <Project>{95f7230c-d695-42ba-9a70-d89f60c58261}</Project>
+      <Name>Advertise.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
